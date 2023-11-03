@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb+srv://admin:hackathon2905@cluster0.zyamahu.mongodb.net/?retryWrites=true&w=majority"
+}
