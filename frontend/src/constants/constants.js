@@ -1,0 +1,2 @@
+const headers={"About":["Portals for QA functionalities in dialpad"],"Execute":["DP web","DPM web","DPM Android","DP android","DP IOS","DPM IOS","DX"],"Home":["Home page"],"Test coverage":["teams"],"Activities":["recent activities"]}
+export default headers;

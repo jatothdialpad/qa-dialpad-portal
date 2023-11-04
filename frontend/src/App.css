@@ -1,9 +1,13 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container-flex{
   margin-top: 68px;
   display: flex;
   /* padding: 50px; */
-  box-sizing: border-box;
+  justify-content: space-around;
   border-bottom: 2px solid #d0cdcd;
 }
 .navbar a{
@@ -31,20 +35,29 @@ a{
   cursor: pointer;
   margin: 0 30px;
 }
-.push{
-  margin-left: auto;
-}
-a.push::after{
-  transform: rotate(45deg) !important;
-}
 .dialpad{
   margin-right: auto;
 }
 .item-container{
   display: flex;
   align-items: center;
+  position: relative;
 }
 .d-icon--chevron-down{
   position: relative;
   top: 0.5em;
+}
+.sub-items{
+  position:absolute;
+  left:50%;
+  top:100%;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+ul>li{
+  width:30vw;
+}
+.rotation{
+  transform: rotate(180deg);
 }

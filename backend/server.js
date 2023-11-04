@@ -1,9 +1,11 @@
 const express = require('express');
 const connectDB = require('./config/db');
+var bodyParser = require('body-parser')
 
 const cors = require('cors');
 
 const app = express();
+app.use(bodyParser.json({ type: 'application/*+json' }))
 
 const testcoverages = require('./routes/api/testcoverages');
 
