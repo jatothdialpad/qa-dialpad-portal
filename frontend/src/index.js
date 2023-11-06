@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import TestCoverage from './components/TestCoverage/TestCoverage';
+import Achievements from './components/Achievements/Achievements';
 import Layout from './layout';
 
 
@@ -12,7 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
        <Route path="testcoverage" element={<TestCoverage/>}/>
-       
+       <Route path="achievements" element={<Achievements/>}/>
     </Route>
   )
 )
