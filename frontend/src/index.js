@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import TestCoverage from './components/TestCoverage/TestCoverage';
 import Layout from './layout';
+import About from './components/About/About';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
        <Route path="testcoverage" element={<TestCoverage/>}/>
+       <Route path="about" element={<About/>}/>
        
     </Route>
   )
