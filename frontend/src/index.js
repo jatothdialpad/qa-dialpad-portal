@@ -7,14 +7,14 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import TestCoverage from './components/TestCoverage/TestCoverage';
 import Achievements from './components/Achievements/Achievements';
 import Layout from './layout';
-import About from './components/About/About';
+import AboutUs from './components/About/About'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
        <Route path="testcoverage" element={<TestCoverage/>}/>
-       <Route path="about" element={<About/>}/>
+       <Route path="about" element={<AboutUs/>}/>
        <Route path="achievements" element={<Achievements/>}/>
     </Route>
   )

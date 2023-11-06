@@ -15,12 +15,12 @@ function TestCoverage() {
   }, []);
   return (
     <>
-    <div className="d-d-grid d-jc-center">
+    <div className="d-wmx1268 d-m-auto d-jc-center">
     <div className='d-ta-center d-mt32'>
 
     <SelectTeam team={team} setTeam={setTeam} projects={coverage} />
 
-<table className='d-table d-table--striped d-mt32' bgcolor='red'>
+<table className='d-table d-table--striped d-mt32 d-fc-neutral-white d-bar16' bgcolor='red'>
   <thead>
     <tr>
       <th>Project</th>
