@@ -1,6 +1,7 @@
 import React from 'react';
 import '@dialpad/dialtone/lib/dist/css/dialtone.min.css';
 import ReactDOM from 'react-dom/client';
+import './font.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
@@ -8,14 +9,14 @@ import TestCoverage from './components/TestCoverage/TestCoverage';
 import Achievements from './components/Achievements/Achievements';
 import Execute from './components/Execute/Execute';
 import Layout from './layout';
-import About from './components/About/About';
+import AboutUs from './components/About/About'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
        <Route path="testcoverage" element={<TestCoverage/>}/>
-       <Route path="about" element={<About/>}/>
+       <Route path="about" element={<AboutUs/>}/>
        <Route path="achievements" element={<Achievements/>}/>
        <Route path="execute" element={<Execute/>}/>
     </Route>
