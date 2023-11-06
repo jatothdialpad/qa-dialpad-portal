@@ -22,7 +22,7 @@ function Achievements() {
     <div className="achievements-page d-ta-center">
       <h1>Achievements</h1>
 
-      <div className="dropdowns">
+      <div className="dropdown_month d-mt12">
         <select
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(e.target.value)}
@@ -34,7 +34,8 @@ function Achievements() {
             </option>
           ))}
         </select>
-
+        </div>
+        <div className="dropdown_team d-mt12">
         <select
           value={selectedTeam}
           onChange={(e) => setSelectedTeam(e.target.value)}
@@ -46,14 +47,15 @@ function Achievements() {
             </option>
           ))}
         </select>
-
+        </div>
+     <div className="button_getdetails d-mt12">
         <button className="d-btn d-btn--primary d-btn--sm" onClick={handleButtonClick}>Get Details</button>
       </div>
 
       {displayedAchievements && (
-        <div class="d-card d-w264">
-        <div class="d-card__header">
-        <div className="displayed-achievements d-ta-center d-bc-magneta-200 d-ba">
+        <div class="d-card d-jc-center d-m-auto d-w100p d-m12">
+        <div class="d-card__header d-jc-center">
+        <div className="displayed-achievements d-ta-center d-bc-magneta-200 d-ba d-jc-center">
           <h2>{displayedAchievements.month} Achievements</h2>
           <ul>
             {displayedAchievements.achievements.map((achievement) => (
