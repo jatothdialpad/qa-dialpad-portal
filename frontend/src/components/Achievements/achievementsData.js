@@ -5,14 +5,26 @@ const achievementsData = [
     achievements: [
       {
         id: 1,
-        name: 'Testing Novice',
-        description: 'You executed your first automated test.',
+        name: 'Test Automation coverage',
+        description: (
+          <ul>
+            <li>Dialpad web automation coverage increased by 3% (39 to 42) including partially automated cases.</li>
+            <li>We have automated 3 additional zoho test cases (The total number of Zoho cases are 26 , We are executing them as part of weekly regression) </li>
+            <li>We have automated 10 MS dynamics test cases and 1 copper test case. </li>
+          </ul>
+        ),
         icon: 'novice.png',
       },
       {
         id: 2,
-        name: 'Test Explorer',
-        description: "You've executed 10 automated tests.",
+        name: 'New initiatives',
+        description: "Test execution time reduction - UI + API integrations - Work In Progress",
+        icon: 'explorer.png',
+      },
+      {
+        id: 3,
+        name: 'ZTP Automation',
+        description: "Implemented logic to run on Stable chrome  or canary chrome. Now this execution is hassle free, so by passing parameters we can execute in stable chrome or canary chrome",
         icon: 'explorer.png',
       },
     ],
@@ -72,5 +84,4 @@ const achievementsData = [
     ],
   },
 ];
-
 export default achievementsData;

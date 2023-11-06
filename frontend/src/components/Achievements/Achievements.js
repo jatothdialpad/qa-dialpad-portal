@@ -47,20 +47,24 @@ function Achievements() {
           ))}
         </select>
 
-        <button onClick={handleButtonClick}>Get Details</button>
+        <button className="d-btn d-btn--primary d-btn--sm" onClick={handleButtonClick}>Get Details</button>
       </div>
 
       {displayedAchievements && (
+        <div class="d-card d-w264">
+        <div class="d-card__header">
         <div className="displayed-achievements d-ta-center d-bc-magneta-200 d-ba">
           <h2>{displayedAchievements.month} Achievements</h2>
           <ul>
             {displayedAchievements.achievements.map((achievement) => (
               <li key={achievement.id}>
-                <h3>{achievement.name}</h3>
+                <h3 className="d-badge d-badge--count d-badge--info">{achievement.name}</h3>
                 <p>{achievement.description}</p>
               </li>
             ))}
           </ul>
+        </div>
+        </div>
         </div>
       )}
     </div>
