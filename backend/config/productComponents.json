@@ -1,0 +1,9 @@
+{
+    "component" : [
+        "Department",
+        "Contact Center",
+        "Coaching Group",
+        "Analytics",
+        "Billings"
+    ]
+}
