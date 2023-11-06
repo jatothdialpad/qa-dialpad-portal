@@ -16,7 +16,7 @@ function Header() {
                         <Link to="/about" className="d-mr6">
                         Logout
                         </Link>
-                        <div className='d-d-flex d-bar-circle d-h32 d-w32 d-bgc-purple-300 d-ta-center d-jc-center d-c-pointer'> RJ</div>
+                        <div className='d-d-flex d-bar-circle d-h32 d-w32 d-bgc-purple-300 d-ta-center d-jc-center d-ai-center d-c-pointer'> RJ</div>
                     </div>
                     <div className='navbar d-d-flex d-jc-flex-end d-divide-x2  d-divide-purple-400'>
                         <div>

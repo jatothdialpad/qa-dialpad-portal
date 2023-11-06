@@ -1,6 +1,7 @@
 import React from 'react';
 import '@dialpad/dialtone/lib/dist/css/dialtone.min.css';
 import ReactDOM from 'react-dom/client';
+import './font.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
