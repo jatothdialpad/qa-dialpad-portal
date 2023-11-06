@@ -25,11 +25,10 @@ function TestCoverage() {
     <tr>
       <th>Project</th>
       <th>Total TCs</th>
-      <th>Automated TCs</th>
-      <th>Partially Automated TCs</th>
-      <th>Not Automatable TCs</th>
-      <th>Not In Scope TCs</th>
-      <th>Not Analyzed TCs</th>
+      <th>Automated</th>
+      <th>Partially Automated</th>
+      <th>Not Automatable</th>
+      <th>Not In Scope</th>
       <th>Automation percentage</th>
     </tr>
   </thead>
@@ -44,7 +43,6 @@ function TestCoverage() {
           <td>{project.partialAutomatedTCs}</td>
           <td>{project.notAutomatableTCs}</td>
           <td>{project.notInScopeTCs}</td>
-          <td>{project.notAnalyzedTCs}</td>
           <td>{project.currentPercentage}</td>
         </tr>
       ))
@@ -59,7 +57,6 @@ function TestCoverage() {
             <td>{project.partialAutomatedTCs}</td>
             <td>{project.notAutomatableTCs}</td>
             <td>{project.notInScopeTCs}</td>
-            <td>{project.notAnalyzedTCs}</td>
             <td>{project.currentPercentage}</td>
           </tr>
         ))
@@ -68,6 +65,8 @@ function TestCoverage() {
 </table>
 
 
+</div>
+<div className='d-ta-center d-mt32 d-headline-large'>Automation Percentage : Automated /  Total test cases 
 </div>
     </div>
     </>
