@@ -70,6 +70,34 @@ a{
   background: rgba(124, 82, 255, 0.9);
   background-image:linear-gradient(180deg, #7c52ff 20%, transparent 50%), linear-gradient(to right, rgba(124, 82, 255, 0.6), #7c52ff, rgba(244, 114, 182, 0.8))
 }
+a{
+  text-decoration: none;
+}
+.achievement-tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.achievement-tile {
+  margin: 8px 0;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; 
+}
+.static-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.static-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px; /* Adjust the width as needed */
+}
+
 .d-table th{
   color: #fff;
   font-weight: 700;
