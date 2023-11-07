@@ -56,3 +56,29 @@ table{
 a{
   text-decoration: none;
 }
+.achievement-tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.achievement-tile {
+  margin: 8px 0;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; 
+}
+.static-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.static-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px; /* Adjust the width as needed */
+}
+
+
