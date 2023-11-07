@@ -12,9 +12,7 @@ function SelectTeam({team,setTeam,projects}) {
           { projects.map(project=><option  key={project._id} value={project.projectName}>{project.projectName}
            </option>)}
         </select>
-        </h2>
-    
-    
+        </h2> 
     </>
   )
 }

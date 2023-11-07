@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 
-function execute() {
+function Execute() {
   
   return (
     <div className="">
@@ -12,5 +13,4 @@ function execute() {
        
   );
 }
-
-export default execute;
+export default Execute
