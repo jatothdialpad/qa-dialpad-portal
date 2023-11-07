@@ -44,7 +44,7 @@ function Achievements() {
         ))}
       </div>
 
-      <div className="dropdowns">
+      <div className="dropdown_month d-mt12">
         <select
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(e.target.value)}
@@ -56,7 +56,8 @@ function Achievements() {
             </option>
           ))}
         </select>
-
+        </div>
+        <div className="dropdown_team d-mt12">
         <select
           value={selectedTeam}
           onChange={(e) => setSelectedTeam(e.target.value)}
@@ -68,7 +69,8 @@ function Achievements() {
             </option>
           ))}
         </select>
-
+        </div>
+     <div className="button_getdetails d-mt12">
         <button className="d-btn d-btn--primary d-btn--sm" onClick={handleButtonClick}>Get Details</button>
       </div>
 

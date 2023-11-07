@@ -3,7 +3,7 @@ import dialpad from './dialpad-logo.svg'
 
 function Dialpad() {
   return (   
-   <img src={dialpad} alt='dialpad-logo' className='d-h32' />
+   <a href='./'><img src={dialpad} alt='dialpad-logo' className='d-h32' /></a>
   )
 }
 

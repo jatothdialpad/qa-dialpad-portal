@@ -18,6 +18,8 @@ app.use(express.json({ extended: false }));
 app.get('/', (req, res) => res.send('Hello world!'));
 
 app.use('/api/testcoverages', testcoverages);
+app.use("/api/dp-qa", require("./routes/api/componentRoutes"))
+app.use("/api/dp-qa", require("./routes/api/acheivementRoutes"))
 
 const port = process.env.PORT || 4000;
 
