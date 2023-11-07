@@ -10,6 +10,8 @@ import Achievements from './components/Achievements/Achievements';
 import Execute from './components/Execute/Execute';
 import Layout from './layout';
 import AboutUs from './components/About/About'
+import Reports from './components/Reports/Reports';
+import Execute from './components/Execute/Execute';
 
 
 const router = createBrowserRouter(
@@ -19,6 +21,7 @@ const router = createBrowserRouter(
        <Route path="about" element={<AboutUs/>}/>
        <Route path="achievements" element={<Achievements/>}/>
        <Route path="execute" element={<Execute/>}/>
+       <Route path="reports" element={<Reports/>}/>
     </Route>
   )
 )
