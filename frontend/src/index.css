@@ -5,6 +5,9 @@
   font-family: 'Archivo', sans-serif;
   font-size: 16px;
 }
+img{
+  max-width:100%;
+}
 select:focus-visible{
   box-shadow: none;
 }
@@ -81,4 +84,43 @@ a{
 }
 .d-table thead th{
   font-size:16px;
+}
+
+.FooterNav a:hover{
+  color: rgb(171, 126, 255)
+}
+.FooterNav a,
+.footer{
+  color:#fff;
+}
+
+.site-header{
+  position:fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 100;
+}
+.footer{
+  position:fixed;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  z-index: 100;
+}
+.site-wrapper{
+  height: calc(100vh - 199px);
+  overflow-y:auto;
+  margin-top: 105px;
+  position: relative;
+  z-index: 1;
+  padding:1.6rem;
+}
+
+.card-details{
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(124, 82, 255, 0.9);
+  padding: 60px 20px;
+  border-radius: 16px;
 }

@@ -6,8 +6,8 @@ import Dialpad from '../../svg/Dialpad'
 function Header() {
     return (
         <>
-        <div className="d-jc-center dt-font-weight-semi-bold d-fc-secondary dt-font-family-mono d-bs-sm">
-            <div className='d-wmx1268 d-m-auto d-d-flex d-jc-space-between d-jc-center d-py16 d-ai-center'>
+        <div className="d-jc-center dt-font-weight-semi-bold d-fc-secondary dt-font-family-mono d-bs-sm d-p16">
+            <div className='d-wmx1268 d-m-auto d-d-flex d-jc-space-between d-jc-cente d-ai-center'>
                 <div className='dialpad-logo'>
                     <Dialpad/>
                 </div>
@@ -32,16 +32,6 @@ function Header() {
                         <div>
                             <Link to="/reports" className="d-px16">
                                 Reports
-                                </Link>
-                        </div>
-                        <div>
-                            <Link to="/about" className="about d-px16">
-                                About
-                                </Link>
-                        </div>
-                        <div>
-                            <Link to="/achievements" className="d-pl16">
-                                Achievements
                                 </Link>
                         </div>
                     </div>
