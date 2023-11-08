@@ -84,4 +84,9 @@ const achievementsData = [
     ],
   },
 ];
+
+// import Fetch from '../Fetch/Fetch';
+// const achievementsData = Fetch('http://localhost:4000/api/dp-qa/acheivements');
+// console.log(achievementsData);
+
 export default achievementsData;

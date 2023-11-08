@@ -13,12 +13,27 @@ select:focus-visible{
 }
 select{
   border:0;
-  background: #7c52ff;
+  background: #fff;
+  cursor:pointer;
+  padding: 10px 20px;
+  border: 1px solid #7c52ff;
+  border-radius: 16px;  
+}
+.team-select select{
+  background-color:#7c52ff;
   appearance: none;
 }
 option{
   font:2em;
 }
+
+ul{
+  padding-left: 15px;
+}
+ul li{
+  list-style: disc;
+}
+
 .container-flex{
   padding:3%;
   display: flex;
@@ -73,6 +88,10 @@ a{
   background: rgba(124, 82, 255, 0.9);
   background-image:linear-gradient(180deg, #7c52ff 20%, transparent 50%), linear-gradient(to right, rgba(124, 82, 255, 0.6), #7c52ff, rgba(244, 114, 182, 0.8))
 }
+a{
+  text-decoration: none;
+}
+
 .d-table th{
   color: #fff;
   font-weight: 700;
@@ -118,9 +137,39 @@ a{
 }
 
 .card-details{
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgba(124, 82, 255, 0.9);
-  padding: 60px 20px;
+  padding: 50px 20px;
   border-radius: 16px;
+  color:#fff;
+  background: rgba(124, 82, 255, 0.9);
+  background-image:linear-gradient(180deg, #7c52ff 20%, transparent 50%), linear-gradient(to right, rgba(124, 82, 255, 0.6), #7c52ff, rgba(244, 114, 182, 0.3))
+}
+
+.card-details h3{
+  min-height:100px;
+}
+.card-details p{
+  font-size:20px;
+}
+
+.accordion-header{
+  position: relative;
+  padding-left: 15px;
+}
+.accordion-header span:after{
+  content:"";
+  position: absolute;
+  right: 15px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+  transition: all ease-in-out 1s;
+}
+
+.accordion-header span.active:after{
+  transform: rotate(-135deg) translateY(-50%);
+  -webkit-transform: rotate(-135deg) translateY(-50%);
 }
