@@ -82,19 +82,23 @@ function Reports() {
   console.log(selectedVersionData)
 
   return (
-    <div className='d-ta-center'>
-      <h1>Test Execution Details</h1>
-      <label htmlFor="versionSelect">Select a version:</label>
-      <select id="versionSelect" value={selectedVersion} onChange={handleVersionChange}>
-        {versions.map((version) => (
-          <option key={version} value={version}>
-            {version}
-          </option>
-        ))}
-      </select>
+    <div class="customer-stories-cards d-wmx1268 d-m-auto d-mb32">
+      <h1 className='d-headline54 d-my16 d-ta-center'>Test Execution Details</h1>
       {selectedVersionData && (
-        <div>
-          <label htmlFor="cycleSelect">Select a cycle:</label>
+      <>
+      <div className='d-d-flex d-wmx512 d-m-auto d-jc-space-around d-mb32'>
+        <div className='d-d-grid d-w40p'>
+          <label htmlFor="versionSelect" className='d-fw-semibold'>Select a version:</label>
+          <select className='d-w100p' id="versionSelect" value={selectedVersion} onChange={handleVersionChange}>
+            {versions.map((version) => (
+              <option key={version} value={version}>
+                {version}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className='d-d-grid d-w40p'>
+          <label htmlFor="cycleSelect" className='d-fw-semibold'>Select a cycle:</label>
           <select id="cycleSelect" value={selectedCycle} onChange={handleCycleChange}>
             {Object.keys(selectedVersionData[selectedVersion][0]).map((cycle) => (
               <option key={cycle} value={cycle}>
@@ -102,12 +106,30 @@ function Reports() {
               </option>
             ))}
           </select>
-          <h2>Test cases details for {selectedVersion} - {selectedCycle} cycle</h2>
-          <p>Total Cases: {selectedVersionData[selectedVersion][0][selectedCycle]["total cases"]}</p>
-          <p>Passed Cases: {selectedVersionData[selectedVersion][0][selectedCycle].passed}</p>
-          <p>Failed cases:{selectedVersionData[selectedVersion][0][selectedCycle].failed} </p>
-          <BarChart labels={Object.keys(selectedVersionData[selectedVersion][0][selectedCycle])} Data={Object.values(selectedVersionData[selectedVersion][0][selectedCycle])}/>
         </div>
+      </div>
+      <div className='d-d-flex d-wmx1024 d-m-auto'>
+        <div className='d-d-grid d-w70p d-mx32'>
+          <BarChart labels={Object.keys(selectedVersionData[selectedVersion][0][selectedCycle])} Data={Object.values(selectedVersionData[selectedVersion][0][selectedCycle])} />
+        </div>
+        <div className='d-d-grid d-w30p d-mx16'>
+          <h2 className='d-headline32'>Test cases details:</h2>
+          <div className='d-fw-semibold'>{selectedVersion} - {selectedCycle} cycle</div> 
+          <div className='d-d-grid d-gg16 d-g-cols2'>
+            <div className='d-fw-semibold'>Total Cases:</div>
+            <div> {selectedVersionData[selectedVersion][0][selectedCycle]["total cases"]}</div>
+          </div>
+          <div className='d-d-grid d-gg16 d-g-cols2'>
+            <div className='d-fw-semibold'>Passed Cases: </div>
+            <div>{selectedVersionData[selectedVersion][0][selectedCycle].passed}</div>
+          </div>
+          <div className='d-d-grid d-gg16 d-g-cols2'>
+            <div className='d-fw-semibold'>Failed cases:</div>
+            <div>{selectedVersionData[selectedVersion][0][selectedCycle].failed} </div>
+          </div>
+        </div>
+      </div>
+        </>
       )}
     </div>
   );

@@ -50,7 +50,8 @@ const BarChart = ({ labels, Data }) => {
           beginAtZero: true,
         }
       },
-     plugins:{legend: {
+     plugins:{
+        legend: {
           display: false
         }
       },
@@ -60,11 +61,11 @@ const BarChart = ({ labels, Data }) => {
     };
   
     return (
-      <div className='d-d-flex d-jc-center d-ai-center'>
-      <div className='d-ta-center' style={{width:"50vw",height:"50vh",textAlign:"center",marginTop:'2%'}}>
         <Bar data={data} options={options} />
-      </div>
-      </div>
+      // <div className='d-d-flex d-jc-center d-ai-center'>
+      // <div className='d-ta-center' style={{width:"50vw",height:"50vh",textAlign:"center",marginTop:'2%'}}>
+      // </div>
+      // </div>
     );
     };
   
