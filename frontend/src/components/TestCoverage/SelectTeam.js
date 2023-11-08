@@ -4,7 +4,6 @@ import styles from './SelectStyles.ts';
 function SelectTeam({team,setTeam,projects}) {
   return (
     <>
-
     <h2 className='team-select'>
         <label> Select Project: </label>
         <select value={team} onChange={(e)=>setTeam(e.target.value)} defaultValue="all" className={styles.select}>

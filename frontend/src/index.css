@@ -5,17 +5,35 @@
   font-family: 'Archivo', sans-serif;
   font-size: 16px;
 }
+img{
+  max-width:100%;
+}
 select:focus-visible{
   box-shadow: none;
 }
 select{
   border:0;
-  background: #7c52ff;
+  background: #fff;
+  cursor:pointer;
+  padding: 10px 20px;
+  border: 1px solid #7c52ff;
+  border-radius: 16px;  
+}
+.team-select select{
+  background-color:#7c52ff;
   appearance: none;
 }
 option{
   font:2em;
 }
+
+ul{
+  padding-left: 15px;
+}
+ul li{
+  list-style: disc;
+}
+
 .container-flex{
   padding:3%;
   display: flex;
@@ -73,30 +91,6 @@ a{
 a{
   text-decoration: none;
 }
-.achievement-tiles {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.achievement-tile {
-  margin: 8px 0;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%; 
-}
-.static-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.static-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 200px; /* Adjust the width as needed */
-}
 
 .d-table th{
   color: #fff;
@@ -109,4 +103,73 @@ a{
 }
 .d-table thead th{
   font-size:16px;
+}
+
+.FooterNav a:hover{
+  color: rgb(171, 126, 255)
+}
+.FooterNav a,
+.footer{
+  color:#fff;
+}
+
+.site-header{
+  position:fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 100;
+}
+.footer{
+  position:fixed;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  z-index: 100;
+}
+.site-wrapper{
+  height: calc(100vh - 199px);
+  overflow-y:auto;
+  margin-top: 105px;
+  position: relative;
+  z-index: 1;
+  padding:1.6rem;
+}
+
+.card-details{
+  padding: 50px 20px;
+  border-radius: 16px;
+  color:#fff;
+  background: rgba(124, 82, 255, 0.9);
+  background-image:linear-gradient(180deg, #7c52ff 20%, transparent 50%), linear-gradient(to right, rgba(124, 82, 255, 0.6), #7c52ff, rgba(244, 114, 182, 0.3))
+}
+
+.card-details h3{
+  min-height:100px;
+}
+.card-details p{
+  font-size:20px;
+}
+
+.accordion-header{
+  position: relative;
+  padding-left: 15px;
+}
+.accordion-header span:after{
+  content:"";
+  position: absolute;
+  right: 15px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+  transition: all ease-in-out 1s;
+}
+
+.accordion-header span.active:after{
+  transform: rotate(-135deg) translateY(-50%);
+  -webkit-transform: rotate(-135deg) translateY(-50%);
 }

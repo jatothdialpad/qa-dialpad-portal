@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function execute() {
   
   return (
+    <div className='d-wmx1268 d-m-auto'>
+      <div className="dropdown_month d-mt12">
     <div className="d-ta-center">
       <div className="dropdown_platform d-mt12">
       <h4 className='platform'>
@@ -37,6 +39,8 @@ function execute() {
       <div className="button_getdetails d-mt12">
         <button className="d-btn d-btn--primary d-btn--sm">Execute</button>
       </div>
+    </div>
+    </div>
     </div>
    
   );
