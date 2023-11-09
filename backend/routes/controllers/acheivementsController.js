@@ -1,5 +1,8 @@
 const fs = require('fs')
 
+//@desc Get all acheivements
+//@route GET /api/dp-qa/acheivements
+
 const getAchivementsData = async (req, res) => {
     fs.readFile('config/AchievementsData.json', 'utf8', (err, data) => {
       if (err) {

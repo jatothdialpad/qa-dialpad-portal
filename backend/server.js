@@ -7,19 +7,16 @@ const cors = require('cors');
 const app = express();
 app.use(bodyParser.json({ type: 'application/*+json' }))
 
-const testcoverages = require('./routes/api/testcoverages');
-
 // Connect Database
 connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('Hello world!'));
-
-app.use('/api/testcoverages', testcoverages);
+app.use('/api/testcoverages', require('./routes/api/testcoverages'));
 app.use("/api/dp-qa", require("./routes/api/componentRoutes"))
 app.use("/api/dp-qa", require("./routes/api/acheivementRoutes"))
+app.use("/api/dp-qa", require("./routes/api/executionRoutes"))
 
 const port = process.env.PORT || 4000;
 
