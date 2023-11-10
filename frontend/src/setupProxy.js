@@ -3,7 +3,7 @@ module.exports = function (app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://localhost:4000',
+            target: 'https://dialpad-qa-portal-backend-latest.onrender.com/',
             changeOrigin: true,
         })
     );
