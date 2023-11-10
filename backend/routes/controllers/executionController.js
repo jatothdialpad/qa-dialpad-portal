@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const token = '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';
+const token = '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';
 
 const config = {
     headers: {

@@ -24,8 +24,36 @@ function Execute() {
   const handleRepoChange=(e)=>{
     setRepo(e.target.value);
   }
+
   const handleExecution=()=>{
+    const selectedUrl =  document.getElementById('workflowSelected').options[ document.getElementById('workflowSelected').selectedIndex];
+    const  workflow_url = selectedUrl.getAttribute('data-url') + "/dispatches";
+    const  workflow_ID = selectedUrl.getAttribute('data-wfid');
     document.getElementById('workFlow-section').style.display = 'block';
+    document.getElementById('workFlow-progress').style.display = 'block';
+    console.log(workflow_url);
+
+    // var myHeaders = new Headers();
+    // myHeaders.append("Content-Type", "application/json");
+    // var raw = JSON.stringify({
+    //   "ref": "main",
+    //   "inputs": {
+    //     "component": "Billing"
+    //   }
+    // });
+    // var requestOptions = {
+    //   method: 'POST',
+    //   headers: myHeaders,
+    //   body: raw,
+    //   redirect: 'follow'
+    // };
+    // fetch(`http://localhost:4000/api/dp-qa/workflows/execute?workflowURL=${workflow_url}`, requestOptions)
+    //   .then(response => response.text())
+    //   .then(result => console.log(result)).then(document.getElementById('workFlow-section').style.display = 'none')
+    //   .catch(error => console.log('error', error));
+  }
+  const getWFstatus=()=>{
+
   }
   return (
       <div className='d-wmx1268 d-m-auto'>
@@ -54,8 +82,8 @@ function Execute() {
           { repo &&
             <div className='d-d-grid d-w25p d-p8'>
               <label htmlFor="cycleSelect" className='d-fw-semibold'>Select a workflow to Trigger:</label>
-              <select onChange={(e)=>setWorkflowSelected(e.target.value)} value={workflowSelected}>
-              {workflowData.map(e=><option value={e.workflow_name} key={e.workflow_name}>{e.workflow_name}</option>)}
+              <select id="workflowSelected" onChange={(e)=>setWorkflowSelected(e.target.value)} value={workflowSelected}>
+              {workflowData.map(e=><option data-wfid={e.workflow_id} data-url={e.workflow_url} value={e.workflow_name} key={e.workflow_name}>{e.workflow_name}</option>)}
               </select>
             </div>
           }
@@ -64,8 +92,18 @@ function Execute() {
           </div>
         </div>
 
-        <div id='workFlow-section'>
+        <div id='workFlow-section' style={{display:'none'}}>
           <div id='workFlow-status'>Workflow Loading <div className='loading'><span></span><span></span><span></span><span></span><span></span></div></div>
+        </div>
+        <div id='workFlow-progress' style={{display:'none'}}>
+          <div className='d-d-flex d-wmx512 d-m-auto d-jc-space-around d-mb32'>
+            <div className='d-d-grid d-gg16 d-ai-center'>
+              <div id="getWFstatus" className='d-fs-300'></div>
+              <div className='d-fs-300'>
+                <button className="d-btn d-btn--primary" type="submit" onClick={getWFstatus}>Get Status</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   );
