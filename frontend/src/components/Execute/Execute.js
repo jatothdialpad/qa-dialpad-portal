@@ -15,7 +15,7 @@ function Execute() {
   useEffect(()=>{
     console.log(repo)
     console.log(selectedTeam)
-    fetch(`http://localhost:4000/api/dp-qa/workflows/${repo}`)
+    fetch(`/api/dp-qa/workflows/${repo}`)
     .then(res=>res.json())
     .then(data=>{setWorkflowData(data.data)
       console.log(data.data)});
