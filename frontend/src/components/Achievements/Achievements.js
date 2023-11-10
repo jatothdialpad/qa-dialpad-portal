@@ -25,11 +25,17 @@ function Achievements() {
     <div class="customer-stories-cards d-wmx1268 d-m-auto">
       <div className="achievements-page">
         <h1 className='d-headline54 d-my16 d-ta-center'>Achievements</h1>
+        <div className="static-cards d-mb16">
+          <div className="card-details d-ta-center d-order3 d-wmx30p d-m-auto">
+              <h3 className='d-fs-300'>Achiever of the Month</h3>
+              <p className='d-fs-300'>Jhon Doe</p>
+          </div>
+        </div>
         <div className="static-cards d-d-grid d-gg16 d-g-cols4 d-ac-center">
           {staticData.map((achievement) => (
-            <div key={achievement.id} className="card-details d-ta-center">
-              <h3 className='d-headline32'>{achievement.name}</h3>
-              <p className='d-headline16'>{achievement.description}</p>
+            <div className="card-details d-ta-center">
+              <h3 className='d-fs-300'>{achievement.name}</h3>
+              <p className='d-fs-300'>{achievement.description}</p>
             </div>
           ))}
         </div>

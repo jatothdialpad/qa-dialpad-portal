@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const token = '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';
+const token = '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';
 
 const config = {
     headers: {
@@ -26,8 +26,7 @@ const postExecute = async (req, res) => {
 
 const getWorkflow = async (req, res) => {
 
-    let osId = req.params.id;
-    // let respository_name;
+    const respository_name=req.params.id
     // if (osId === 'android') {
     //     repository_name = 'qa-dp-android';
     // } else if (osId === 'web') {
