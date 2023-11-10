@@ -18,6 +18,7 @@ select{
   padding: 10px 20px;
   border: 1px solid #7c52ff;
   border-radius: 16px;  
+  width: 100%;
 }
 .team-select select{
   background-color:#7c52ff;
@@ -137,7 +138,7 @@ a{
 }
 
 .card-details{
-  padding: 50px 20px;
+  padding: 30px 15px;
   border-radius: 16px;
   color:#fff;
   background: rgba(124, 82, 255, 0.9);
@@ -172,4 +173,71 @@ a{
 .accordion-header span.active:after{
   transform: rotate(-135deg) translateY(-50%);
   -webkit-transform: rotate(-135deg) translateY(-50%);
+}
+
+#workFlow-section{
+  width: 100%;
+  min-height: 30vh;
+  position: relative;
+}
+#workFlow-status{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translateX(-50%)translateY(-50%);
+}
+.loading{
+  position: relative;
+} 
+.loading span{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: turquoise;
+  animation: move-the-circle 1s infinite;
+  transform-origin: center center;
+}
+
+.loading span:nth-child(1) {
+  left: 0px;
+  animation-delay: 0.1s;
+}
+
+.loading span:nth-child(2) {
+  left: 30px;
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  left: 60px;
+  animation-delay: 0.3s;
+}
+
+.loading span:nth-child(4) {
+  left: 90px;
+  animation-delay: 0.4s;
+}
+
+.loading span:nth-child(5) {
+  left: 120px;
+  animation-delay: 0.5s;
+}
+
+@keyframes move-the-circle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: #7c52ff;
+  }
+  50% {
+    transform: translate(0, 50px) scale(.4);
+    opacity: .5;
+    background-color: rgb(171, 126, 255);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: #7c52ff;
+  }
 }

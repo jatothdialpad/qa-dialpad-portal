@@ -1,5 +1,7 @@
 const axios = require('axios')
-const token = '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';
+
+const token = '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';
+
 const config = {
     headers: {
         "Authorization": `Bearer ${token}`
