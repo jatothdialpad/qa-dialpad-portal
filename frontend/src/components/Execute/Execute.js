@@ -15,10 +15,11 @@ function Execute() {
   useEffect(()=>{
     console.log(repo)
     console.log(selectedTeam)
-    fetch(`/api/dp-qa/workflows/${repo}`)
+    fetch(`https://dialpad-qa-portal-backend-latest.onrender.com/api/dp-qa/workflows/${repo}`)
     .then(res=>res.json())
     .then(data=>{setWorkflowData(data.data)
-      console.log(data.data)});
+      console.log(data.data)})
+    .catch("an error occured");
   },[repo])
 
   const handleRepoChange=(e)=>{
@@ -79,14 +80,14 @@ function Execute() {
             ))}
             </select>
           </div>
-          { repo &&
             <div className='d-d-grid d-w25p d-p8'>
               <label htmlFor="cycleSelect" className='d-fw-semibold'>Select a workflow to Trigger:</label>
+              { workflowData?
               <select id="workflowSelected" onChange={(e)=>setWorkflowSelected(e.target.value)} value={workflowSelected}>
               {workflowData.map(e=><option data-wfid={e.workflow_id} data-url={e.workflow_url} value={e.workflow_name} key={e.workflow_name}>{e.workflow_name}</option>)}
-              </select>
+              </select> : <div style={{color:"rgba(255,0,0,0.8)"}}>an error occured while fetching workflows</div>
+              }
             </div>
-          }
           <div className='d-w25p d-p8'>
             <button className="d-btn d-btn--primary d-btn--lg" type="submit" onClick={handleExecution}>start execution</button>
           </div>

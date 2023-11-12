@@ -6,7 +6,7 @@ function TestCoverage() {
   const [coverage,setCoverage] = useState([]);
   const [team,setTeam]=useState("all");
   useEffect(() => {
-    fetch("/api/testcoverages")
+    fetch("https://dialpad-qa-portal-backend-latest.onrender.com/api/testcoverages")
     .then(res=>res.json())
     .then(data=>{
       setCoverage(data)
